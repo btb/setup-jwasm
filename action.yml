@@ -9,3 +9,4 @@ runs:
         jwasm: true
     - if: ${{ runner.os == 'macOS' }}
       run: brew install jwasm
+      shell: bash
