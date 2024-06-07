@@ -1,0 +1,12 @@
+name: 'Setup JWasm'
+description: 'Install JWasm'
+runs:
+  using: 'composite'
+  steps:
+    - if: ${{ runner.os == 'Linux' || runner.os == 'Windows' }}
+      uses: karcherm/action-install-jw@v1.0
+      with:
+        jwasm: true
+    - if: ${{ runner.os == 'macOS' }}
+      run: brew install btb/homebrew-open-watcom/jwasm
+      shell: bash
