@@ -8,5 +8,5 @@ runs:
       with:
         jwasm: true
     - if: ${{ runner.os == 'macOS' }}
-      run: brew install jwasm
+      run: brew install btb/homebrew-open-watcom/jwasm
       shell: bash
